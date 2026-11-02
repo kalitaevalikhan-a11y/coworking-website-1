@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusSpace — Coworking for IT Specialists</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo">FocusSpace</div>
+      <nav>
+        <a href="#tariffs">Tariffs</a>
+        <a href="#location">Location</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#events">Events</a>
+      </nav>
+      <a href="#book" class="btn btn-primary">Test Day</a>
+      <button class="burger">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Space for Productive Work 24/7</h1>
+        <p>Flexible workspaces, premium amenities, and a community built to help you focus and grow.</p>
+        <a href="#tariffs" class="btn btn-light">Find Your Space</a>
+      </div>
+    </section>
+
+    <section id="tariffs" class="tariffs">
+      <div class="container">
+        <h2>Simple Pricing. Flexible Plans.</h2>
+        <p class="subtitle">Choose the workspace that fits your needs.</p>
+        <div class="tariff-grid">
+          <article class="card">
+            <h3>Hot Desk</h3>
+            <p>Shared desk access in a vibrant workspace.</p>
+            <div class="price">$15 <span>/ day</span></div>
+            <ul>
+              <li>Access during business hours</li>
+              <li>High-speed Wi-Fi</li>
+              <li>Community events</li>
+            </ul>
+            <a href="#book" class="btn btn-outline">View Details</a>
+          </article>
+
+          <article class="card featured">
+            <span class="badge">Most Popular</span>
+            <h3>Fixed Desk</h3>
+            <p>Your own dedicated desk, every day.</p>
+            <div class="price">$250 <span>/ month</span></div>
+            <ul>
+              <li>24/7 access</li>
+              <li>Personal desk with storage</li>
+              <li>Priority community access</li>
+            </ul>
+            <a href="#book" class="btn btn-primary">View Details</a>
+          </article>
+
+          <article class="card">
+            <h3>Team Office</h3>
+            <p>Private office for teams of 3–8 people.</p>
+            <div class="price">$800 <span>/ month</span></div>
+            <ul>
+              <li>24/7 private access</li>
+              <li>Meeting room credits</li>
+              <li>Customizable space</li>
+            </ul>
+            <a href="#book" class="btn btn-outline">View Details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="book" class="booking">
+      <div class="container">
+        <h2>Book Your Workspace</h2>
+        <form class="booking-form">
+          <label>Zone Selection
+            <select required>
+              <option value="">Select zone</option>
+              <option>Hot Desk</option>
+              <option>Fixed Desk</option>
+              <option>Team Office</option>
+            </select>
+          </label>
+          <label>Time Interval
+            <input type="text" placeholder="e.g. 09:00 – 18:00" required>
+          </label>
+          <label>Phone
+            <input type="tel" placeholder="+7 ___ ___ __ __" required>
+          </label>
+          <button type="submit" class="btn btn-primary">Check Availability</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div class="logo">FocusSpace</div>
+        <p>Coworking. Reimagined.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#tariffs">Tariffs</a>
+        <a href="#location">Location</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#events">Events</a>
+      </div>
+      <div>
+        <h4>Resident Regulations</h4>
+        <p>Please follow coworking rules and respect other members.</p>
+      </div>
+      <div>
+        <h4>Theme</h4>
+        <button id="theme-toggle">Light / Dark</button>
+      </div>
+    </div>
+    <p class="copyright">© 2025 FocusSpace. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggle.textContent = document.body.classList.contains('dark') ? 'Light' : 'Dark';
+    });
+  </script>
+</body>
+</html>
